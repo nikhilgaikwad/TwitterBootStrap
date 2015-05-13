@@ -1,0 +1,61 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    <div class="jumbotron">
+        <div class="navbar navbar-inverse navbar-fixed-top">
+            @*Logo*@
+            <div class="navbar-brand col-lg-1">
+                <img src="" alt="Logo">
+            </div>
+
+            @*Title*@
+            <div class="text-primary col-lg-7 col-md-2">
+                Customer Admin Services & Enquiries (CASE) - Production
+            </div>
+
+            @*Langauge Dropdown*@
+            <div class="dropdown col-lg-1">
+                <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
+                    English-Australia
+                    <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Chinese</a></li>
+                    <li><a href="#">Hindi</a></li>
+                    <li><a href="#">Japanese</a></li>
+                </ul>
+            </div>
+
+            @*Version area*@
+            <div class="col-lg-1 navbar-brand">
+                Version: xxxxxx
+            </div>
+
+            @*Welcome Note*@
+            <div class="col-lg-1 navbar-default">
+                <p class="">
+                    <small>
+                        Welcome,<br />
+                        <label class="control-label">
+                            @ViewBag.UserName
+                        </label>
+                    </small>
+                </p>
+            </div>
+        </div>
+
+        <div class="container body-content">
+            @RenderBody()
+            <hr />
+            <footer></footer>
+        </div>
+    </div>
+</body>
+</html>
