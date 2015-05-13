@@ -21,7 +21,7 @@
             </div>
 
             @*Langauge Dropdown*@
-            <div class="dropdown col-lg-1">
+            <div class="dropdown col-lg-1 col-md-12">
                 <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
                     English-Australia
                     <span class="caret"></span>
@@ -35,12 +35,12 @@
 
             @*Version area*@
             <div class="col-lg-1 navbar-brand">
-                Version: xxxxxx
+                Version: @ViewBag.Version
             </div>
 
             @*Welcome Note*@
             <div class="col-lg-1 navbar-default">
-                <p class="">
+                <p>
                     <small>
                         Welcome,<br />
                         <label class="control-label">
@@ -51,11 +51,41 @@
             </div>
         </div>
 
-        <div class="container body-content">
-            @RenderBody()
-            <hr />
+        @*Side bar*@
+        <div id="Sidebar" class="container col-lg-2">
+            <div class="col-md-12">
+                @*App Icons container*@
+                <div class=" col-lg-12 btn-block btn-xs btn-group-lg ">
+                    <div class="btn-xs glyphicon-signal glyphicon btn btn-success "></div>
+                    <div class="btn-xs glyphicon-pencil glyphicon btn btn-info "></div>
+                    <div class="btn-xs glyphicon-user glyphicon btn btn-warning "></div>
+                    <div class="btn-xs glyphicon-cog glyphicon btn btn-danger "></div>
+                </div>
+            </div>
+            @*Side Menu List Container*@
+            <div class="container col-md-6">
+                <ul class="nav navbar-nav">
+                    <li><a href="#">Home</a></li>
+                </ul>
+            </div>
+            @*Dyainamic Container*@
+            <div id="Container" class="col-lg-10">
+
+                @*ContainerHeader*@
+                <div class="">
+                    @*Nevigator*@
+                    <div class="">
+                        <div class="glyphicon-home glyphicon col-lg-2"> Home </div>
+                    </div>
+                </div>
+
+                <div class="container body-content">
+                    @RenderBody()
+                    <hr />
+
+                </div>
+            </div>
             <footer></footer>
         </div>
-    </div>
 </body>
 </html>

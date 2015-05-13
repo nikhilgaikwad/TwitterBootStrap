@@ -17,6 +17,7 @@ namespace BootStrapExample.Controllers
         public ActionResult CustomerRequests()
         {
             ViewBag.UserName = "Nikhil";
+            @ViewBag.Version = "9.1.5.5";
             return View();
         }
     }
