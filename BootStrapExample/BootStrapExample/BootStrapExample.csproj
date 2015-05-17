@@ -250,6 +250,8 @@
     <Content Include="Views\Shared\_AdminLayout.cshtml" />
     <Content Include="Views\Admin\CustomerRequests.cshtml" />
     <Content Include="TwitterBootstrapMvcLicense.lic" />
+    <Content Include="Views\Shared\_LayoutAdminMVC.cshtml" />
+    <Content Include="Views\Admin\CustomerRequestsMVC.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

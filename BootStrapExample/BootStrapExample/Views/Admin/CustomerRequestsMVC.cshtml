@@ -1,0 +1,30 @@
+﻿@using TwitterBootstrapMVC.Infrastructure.Enums
+@model BootStrapExample.Models.CustomerEnquiresAndServicesModel
+
+@{
+    Layout = null;
+}
+
+
+@using (var p = Html.Bootstrap().Begin(new Panel().Style(PanelStyle.Danger)))
+{
+    @p.Heading("My cool header")
+    using (p.BeginBody())
+    {
+        <p>Body</p>
+    }
+    using (var t = p.BeginTable(new Table()))
+    {
+        using (var r = t.BeginRow())
+        {
+            @r.Cell("cell 1")
+            @r.Cell("cell 2")
+        }
+    }
+    using (var l = p.BeginListGroup())
+    {
+        @l.Item("item1")
+        @l.Item("item2")
+    }
+    @p.Footer("My cool footer")
+}

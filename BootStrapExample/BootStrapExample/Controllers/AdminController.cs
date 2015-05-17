@@ -20,5 +20,13 @@ namespace BootStrapExample.Controllers
             @ViewBag.Version = "9.1.5.5";
             return View();
         }
+
+        public ActionResult CustomerRequestsMVC()
+        {
+            ViewBag.UserName = "Nikhil";
+            @ViewBag.Version = "9.1.5.5";
+            return View();
+        }
+
     }
 }
